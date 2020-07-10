@@ -15,21 +15,35 @@
 
     $rows = $result->num_rows;
 
+//    for ($i = 0; $i < $rows; ++$i) {
+//        $result->data_seek($i);
+//        echo 'Author: ' . $result->fetch_assoc()['author'] . '<br>';
+//
+//        $result->data_seek($i);
+//        echo 'Title: ' . $result->fetch_assoc()['title'] . '<br>';
+//
+//        $result->data_seek($i);
+//        echo 'Category: ' . $result->fetch_assoc()['category'] . '<br>';
+//
+//        $result->data_seek($i);
+//        echo 'Year: ' . $result->fetch_assoc()['year'] . '<br>';
+//
+//        $result->data_seek($i);
+//        echo 'isbn: ' . $result->fetch_assoc()['isbn'] . '<br> <br>';
+//    }
+
     for ($i = 0; $i < $rows; ++$i) {
-        $result->data_seek($i);
-        echo 'Author: ' . $result->fetch_assoc()['author'] . '<br>';
+        $row = $result->fetch_array(MYSQLI_ASSOC);
 
-        $result->data_seek($i);
-        echo 'Title: ' . $result->fetch_assoc()['title'] . '<br>';
+        echo 'Author: ' . $row['author'] . '<br>';
 
-        $result->data_seek($i);
-        echo 'Category: ' . $result->fetch_assoc()['category'] . '<br>';
+        echo 'Title: ' . $row['title'] . '<br>';
 
-        $result->data_seek($i);
-        echo 'Year: ' . $result->fetch_assoc()['year'] . '<br>';
+        echo 'Category: ' . $row['category'] . '<br>';
 
-        $result->data_seek($i);
-        echo 'isbn: ' . $result->fetch_assoc()['isbn'] . '<br> <br>';
+        echo 'Year: ' . $row['year'] . '<br>';
+
+        echo 'isbn: ' . $row['isbn'] . '<br> <br>';
     }
 
     $result->close();

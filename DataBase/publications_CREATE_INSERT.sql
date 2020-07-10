@@ -16,11 +16,11 @@ CREATE TABLE IF NOT EXISTS classics  (
     INDEX (category(4)),
     INDEX (year),
 
-    CreatedBy NVARCHAR(32),
-    UpdatedBy NVARCHAR(32),
-    CreatedDate DATETIME,
-    UpdatedDate DATETIME,
-    Enabled BOOLEAN,
+    CreatedBy NVARCHAR(32) DEFAULT 'Hieu-iceTea',
+    UpdatedBy NVARCHAR(32) DEFAULT NULL,
+    CreatedDate DATETIME DEFAULT CURRENT_TIME,
+    UpdatedDate DATETIME DEFAULT NULL,
+    Enabled BOOLEAN DEFAULT true,
 
     PRIMARY KEY (isbn)
 ) ENGINE InnoDB;
@@ -38,11 +38,11 @@ CREATE TABLE IF NOT EXISTS customers   (
     name VARCHAR(128),
     isbn CHAR(13),
 
-    CreatedBy NVARCHAR(32),
-    UpdatedBy NVARCHAR(32),
-    CreatedDate DATETIME,
-    UpdatedDate DATETIME,
-    Enabled BOOLEAN,
+    CreatedBy NVARCHAR(32) DEFAULT 'Hieu-iceTea',
+    UpdatedBy NVARCHAR(32) DEFAULT NULL,
+    CreatedDate DATETIME DEFAULT CURRENT_TIME,
+    UpdatedDate DATETIME DEFAULT NULL,
+    Enabled BOOLEAN DEFAULT true,
 
     PRIMARY KEY (isbn)
 ) ENGINE InnoDB;
