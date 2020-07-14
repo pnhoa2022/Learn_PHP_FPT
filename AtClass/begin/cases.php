@@ -1,3 +1,5 @@
+<?php $_SESSION['username'] = "Admin" ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +32,7 @@
             <div class="gallery-container">
 
                 <?php
-                include_once 'dbh.inc.php';
+                include_once 'includes/dbh.inc.php';
 
                 $connection = new mysqli($hn, $un, $pw, $db);
 
@@ -48,6 +50,23 @@
                 ?>
 
             </div>
+
+            <?php
+                if (isset($_SESSION['username'])) {
+                    echo '
+                        <div class="gallery-upload">
+                            <h2>Upload</h2>
+                            <form action="includes/gallery-upload.inc-ver2.php" method="post" enctype="multipart/form-data">
+                                <input type="text" name="filename" placeholder="File name...">
+                                <input type="text" name="filetitle" placeholder="File title...">
+                                <input type="text" name="filedesc" placeholder="File desc...">
+                                <input type="file" name="file">
+                                <button type="submit" name="submit">UPLOAD</button>
+                            </form>
+                        </div>
+                    ';
+                }
+            ?>
 
         </div>
     </section>
