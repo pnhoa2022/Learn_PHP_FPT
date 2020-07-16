@@ -41,6 +41,8 @@ if (isset($_POST['login'])) {
 
 <body>
 
+<?php include_once 'includes/nav.inc.php'?>
+
 <div class="container-fluid">
     <div class="container mt-5">
         <div class="row justify-content-center">

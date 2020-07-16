@@ -1,6 +1,26 @@
 <?php
-?>
+if (!isset($_COOKIE['UserName'])) {
+    header("Location: login.php");
+}
 
+if (isset($_POST['Delete'])) {
+    //Lấy data từ form
+    $IDProduct = $_POST['IDProduct'];
+
+    //Cập nhật DB
+    include_once 'includes/dbh.inc.php';
+    $query_delete = "UPDATE Product SET Enabled = FALSE WHERE IDProduct = $IDProduct;";
+    $result_delete = $connection->query($query_delete);
+
+    if (!$result_delete) {
+        die('Delete fail!');
+    }
+
+    //xoá ảnh
+    $Image = $_POST['Image'];
+    unlink('img/' . $Image);
+}
+?>
 
 <!doctype html>
 <html lang="en">
@@ -16,12 +36,16 @@
 
 <body>
 
+
+<?php include_once 'includes/nav.inc.php'?>
+
+
 <div class="container-fluid">
     <div class="container mt-5">
 
         <div class="row">
             <div class="col-md-12">
-                <h3 class="d-inline">List of products</h3>
+                <h3 class="d-inline">[ADMIN] List of products</h3>
 
                 <form action="AddNew_Edit.php" method="post" class="d-inline float-right">
                     <button type="submit" id="AddNew" name="AddNew" class="btn btn-success">Add New</button>
@@ -34,7 +58,8 @@
         <div class="row mb-2 mt-3">
             <div class="col-md-12">
                 <form method="get" class="form-inline my-2 my-lg-0">
-                    <input name="Filter" id="Filter" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <input name="Filter" id="Filter" class="form-control mr-sm-2" type="search" placeholder="Search"
+                           aria-label="Search">
                     <button id="Search" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
@@ -47,14 +72,15 @@
 
             if (isset($_GET['Filter'])) {
                 $Filter = $_GET['Filter'];
-                $query_select = "SELECT * FROM Product WHERE Name LIKE '%$Filter%';";
+                $query_select = "SELECT * FROM Product WHERE Enabled = TRUE AND Name LIKE '%$Filter%';";
             } else {
-                $query_select = "SELECT * FROM Product;";
+                $query_select = "SELECT * FROM Product WHERE Enabled = TRUE;";
             }
 
             $result = $connection->query($query_select);
 
             while ($rowData = $result->fetch_array(MYSQLI_ASSOC)) {
+                $IDProduct = $rowData['IDProduct'];
                 $Name = $rowData['Name'];
                 $Description = $rowData['Description'];
                 $Image = $rowData['Image'];
@@ -66,8 +92,18 @@
                         <div class="card-body">
                             <h5 class="card-title">$Name</h5>
                             <p class="card-text">$Description</p>
-                            <button class="btn btn-primary">Edit</button>
-                            <button class="btn btn-primary">Delete</button>
+                            
+                            <form action="AddNew_Edit.php" method="post" class="d-inline">
+                                <input type="hidden" name="IDProduct" value="$IDProduct">
+                                <button type="submit" id="Edit" name="Edit" class="btn btn-success">Edit</button>
+                            </form>
+                
+                            <form method="post" class="d-inline">
+                                <input type="hidden" name="delete" value="yes">
+                                <input type="hidden" name="IDProduct" value="$IDProduct">
+                                <input type="hidden" name="Image" value="$Image">
+                                <button type="submit" id="Delete" name="Delete" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this item?');">Delete</button>
+                            </form>
                         </div>
                     </div>
                 </div>

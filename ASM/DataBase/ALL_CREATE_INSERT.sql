@@ -53,7 +53,3 @@ INSERT INTO Product (Name, Description, Image)
     VALUES ('PC 3', 'Description 3', 'macbook_3.jpg');
 INSERT INTO Product (Name, Description, Image)
     VALUES ('Laptop 4', 'Description 4', 'macbook-air-2020-feature-3.jpg');
-
-
-
-
