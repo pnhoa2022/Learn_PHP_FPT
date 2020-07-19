@@ -1,5 +1,5 @@
 <?php
-if (!isset($_COOKIE['UserName'])) {
+if (!isset($_COOKIE['UserName']) && !isset($_SESSION['user'])) {
     header("Location: login.php");
 }
 
