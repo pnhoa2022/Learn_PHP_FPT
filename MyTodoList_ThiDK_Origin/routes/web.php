@@ -61,7 +61,19 @@ Route::delete('/task/{ID}', function ($ID) {
 
     //Task::where('ID', $ID)->delete();
 
+
+
+    //Cách 1
     Task::where('ID', $ID)->update(['Enabled' => FALSE]);
+
+    //Cách 2 (thử lại vẫn k được)
+    //$task = Task::find($ID);
+    //echo $task->Name; //thử in ra màn hình xem có lấy đc bản ghi không (nhớ bỏ dòng return chuyển hướng về trang chủ)
+    //$task->Enabled = FALSE;
+    //$task->save();
+
+
 
     return redirect('/');
 });
+

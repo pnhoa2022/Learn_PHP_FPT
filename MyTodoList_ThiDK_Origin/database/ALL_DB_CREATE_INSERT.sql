@@ -1,3 +1,7 @@
+# Script DataBase
+# Hiếu iceTea
+# 2020-07-24
+
 # - - - - - - - - - - - - - - - - - - - - Create DataBase - - - - - - - - - - - - - - - - - - - -  #
 
 # Create DataBase
