@@ -2,5 +2,6 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/VietProShop_PHP/Docs/ALL_DB_CREATE_INSERT.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/VietProShop_PHP/Docs/Source/project-lar/backend/project-lar.sql" dialect="MySQL" />
   </component>
 </project>
