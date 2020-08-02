@@ -13,4 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'Home@index');
+Route::group(['middleware' => 'guest'], function () {
+    Route::match(['get', 'post'], '/login', 'Login@index')->name('login');
+});
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/home', 'Home@index')->name('/home');
+});
+
+
+

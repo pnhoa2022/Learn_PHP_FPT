@@ -20,16 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92c7e4fe-3674-4d42-ba37-3d431b4b254e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Learn_PHP_FPT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Learn_PHP_FPT.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn_Laravel_NVD/app/Http/Controllers/Login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn_Laravel_NVD/resources/views/layout/planlogin.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learn_Laravel_NVD/resources/views/login/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VietProShop_PHP/Docs/ALL_DB_CREATE_INSERT.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VietProShop_PHP/Docs/project-lar.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learn_Laravel_NVD/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Learn_Laravel_NVD/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learn_Laravel_NVD/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/Learn_Laravel_NVD/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/cms/composer.json</pharConfigPath>
     <execution />
   </component>
@@ -44,15 +51,28 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1eJ6XfgGHgviZFG5oPOGn1keJ9g" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/VietProShop_PHP/Docs" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Learn_PHP_FPT\VietProShop_PHP\Docs" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Learn_PHP_FPT\VietProShop_PHP\Docs" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -67,6 +87,7 @@
       <updated>1594027389806</updated>
       <workItem from="1594027391645" duration="25000" />
       <workItem from="1596163472258" duration="1516000" />
+      <workItem from="1596342867939" duration="785000" />
     </task>
     <servers />
   </component>
@@ -83,5 +104,28 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596343016794">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738/1366.-136.1440.870@0.0.1366.738" timestamp="1596343016794" />
+    <state width="905" height="182" key="GridCell.Tab.0.bottom" timestamp="1596343247472">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="905" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738/1366.-136.1440.870@0.0.1366.738" timestamp="1596343247472" />
+    <state width="905" height="182" key="GridCell.Tab.0.center" timestamp="1596343247472">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="905" height="182" key="GridCell.Tab.0.center/0.0.1366.738/1366.-136.1440.870@0.0.1366.738" timestamp="1596343247472" />
+    <state width="905" height="182" key="GridCell.Tab.0.left" timestamp="1596343247472">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="905" height="182" key="GridCell.Tab.0.left/0.0.1366.738/1366.-136.1440.870@0.0.1366.738" timestamp="1596343247472" />
+    <state width="905" height="182" key="GridCell.Tab.0.right" timestamp="1596343247472">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="905" height="182" key="GridCell.Tab.0.right/0.0.1366.738/1366.-136.1440.870@0.0.1366.738" timestamp="1596343247472" />
   </component>
 </project>
