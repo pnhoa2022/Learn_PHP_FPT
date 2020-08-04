@@ -8,6 +8,8 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+    protected $table = 'Users';
+
     use Notifiable;
 
     /**
@@ -16,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'Name', 'Email', 'Password',
     ];
 
     /**
@@ -25,7 +27,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'Password', 'Remember_token',
     ];
 
     /**
@@ -34,6 +36,16 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        'Email_verified_at' => 'datetime',
     ];
+
+    //Loại bỏ Token nếu bảng trong database k có cột ấy
+//    public function setAttribute($key, $value)
+//    {
+//        $check = $key == $this->getRememberTokenName();
+//
+//        if (!$check) {
+//            parent::setAttribute($key, $value);
+//        }
+//    }
 }
