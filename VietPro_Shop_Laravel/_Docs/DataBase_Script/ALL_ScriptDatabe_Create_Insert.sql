@@ -1,10 +1,10 @@
 # - - - - - - - - - - - - - - - - - - - - Create DataBase - - - - - - - - - - - - - - - - - - - -  #
 
 # Create DataBase
-DROP DATABASE IF EXISTS VietProShop_Laravel;
-CREATE DATABASE IF NOT EXISTS VietProShop_Laravel CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+DROP DATABASE IF EXISTS VietPro_Shop_Laravel;
+CREATE DATABASE IF NOT EXISTS VietPro_Shop_Laravel CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
-USE VietProShop_Laravel;
+USE VietPro_Shop_Laravel;
 
 # - - - - - - - - - - - - - - - - - - - - Create Tables - - - - - - - - - - - - - - - - - - - -  #
 
