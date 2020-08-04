@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +19,16 @@ Route::get('/', function () {
 });
 
 Route::group(['namespace' => 'Admin'], function () {
-    Route::group(['prefix' => 'login'], function () {
-        Route::get('/', 'LoginController@getLogin');
+    Route::group(['prefix' => 'login', 'middleware' => 'CheckLogedIn'], function () {
+        Route::get('/', 'LoginController@getLogin')->name('login');
+        Route::post('/', 'LoginController@postLogin');
+    });
+
+    Route::group(['prefix' => 'logout'], function () {
+        Route::get('/', 'LoginController@getLogout')->name('logout');
+    });
+
+    Route::group(['prefix' => 'admin', 'middleware' => 'CheckLogedOut'], function () {
+        Route::get('home', 'HomeController@getHome');
     });
 });

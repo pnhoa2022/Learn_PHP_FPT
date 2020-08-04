@@ -4989,53 +4989,57 @@
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="1197" parent="411" name="email">
+    <column id="1197" parent="411" name="name">
       <Position>2</Position>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="1198" parent="411" name="password">
+    <column id="1198" parent="411" name="email">
       <Position>3</Position>
       <DataType>varchar(64)|0s</DataType>
     </column>
-    <column id="1199" parent="411" name="level">
+    <column id="1199" parent="411" name="password">
       <Position>4</Position>
+      <DataType>varchar(64)|0s</DataType>
+    </column>
+    <column id="1200" parent="411" name="level">
+      <Position>5</Position>
       <DataType>tinyint(4)|0s</DataType>
     </column>
-    <column id="1200" parent="411" name="remember_token">
-      <Position>5</Position>
+    <column id="1201" parent="411" name="remember_token">
+      <Position>6</Position>
       <DataType>varchar(128)|0s</DataType>
     </column>
-    <column id="1201" parent="411" name="created_by">
-      <Position>6</Position>
+    <column id="1202" parent="411" name="created_by">
+      <Position>7</Position>
       <DataType>varchar(32)|0s</DataType>
       <DefaultExpression>&apos;Hieu-iceTea&apos;</DefaultExpression>
       <Collation>utf8_general_ci</Collation>
     </column>
-    <column id="1202" parent="411" name="created_at">
-      <Position>7</Position>
+    <column id="1203" parent="411" name="created_at">
+      <Position>8</Position>
       <DataType>datetime|0s</DataType>
       <DefaultExpression>curtime()</DefaultExpression>
     </column>
-    <column id="1203" parent="411" name="updated_by">
-      <Position>8</Position>
+    <column id="1204" parent="411" name="updated_by">
+      <Position>9</Position>
       <DataType>varchar(32)|0s</DataType>
       <Collation>utf8_general_ci</Collation>
     </column>
-    <column id="1204" parent="411" name="updated_at">
-      <Position>9</Position>
+    <column id="1205" parent="411" name="updated_at">
+      <Position>10</Position>
       <DataType>datetime|0s</DataType>
     </column>
-    <column id="1205" parent="411" name="version">
-      <Position>10</Position>
+    <column id="1206" parent="411" name="version">
+      <Position>11</Position>
       <DataType>int(11)|0s</DataType>
       <DefaultExpression>1</DefaultExpression>
     </column>
-    <column id="1206" parent="411" name="deleted">
-      <Position>11</Position>
+    <column id="1207" parent="411" name="deleted">
+      <Position>12</Position>
       <DataType>tinyint(1)|0s</DataType>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <key id="1207" parent="411" name="PRIMARY">
+    <key id="1208" parent="411" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

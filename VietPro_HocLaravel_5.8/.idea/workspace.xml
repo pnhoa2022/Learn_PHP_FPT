@@ -20,46 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="427170ad-deab-42fe-ac2d-ea3e2f1b3478" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/Docs/DataBase_Script/ALL_ScriptDatabe_Create_Insert.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/app/Http/Controllers/Admin/LoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/css/bootstrap-table.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/css/bootstrap-theme.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/css/bootstrap-theme.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/css/bootstrap-theme.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/css/datepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/css/datepicker3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/fonts/glyphicons-halflings-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/fonts/glyphicons-halflings-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/img/iphone7-plus-black-select-2016.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/img/new_seo-10-512.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/img/upload-cloud.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/js/bootstrap-datepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/js/bootstrap-table.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/js/chart-data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/js/chart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/js/easypiechart-data.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/js/easypiechart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/js/html5shiv.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/js/jquery-1.11.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/js/lumino.glyphs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/js/myscript.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/js/respond.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/tables/data1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietProShop_Laravel/public/asset/backend/tables/data2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VietProShop_Laravel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../VietProShop_Laravel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VietProShop_Laravel/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/../VietProShop_Laravel/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VietProShop_Laravel/resources/views/backend/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../VietProShop_Laravel/resources/views/backend/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VietProShop_Laravel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../VietProShop_Laravel/routes/web.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/app/Http/Middleware/CheckLogedIn.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/app/Http/Middleware/CheckLogedOut.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/app/Http/Requests/LoginRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/resources/views/backend/errors/all_errors.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VietPro_Shop_Laravel/.idea/dataSources/6afbd3a9-9505-49ae-bad0-cd53bc36d9a0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/.idea/dataSources/6afbd3a9-9505-49ae-bad0-cd53bc36d9a0.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VietPro_Shop_Laravel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VietPro_Shop_Laravel/_Docs/DataBase_Script/ALL_ScriptDatabe_Create_Insert.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/_Docs/DataBase_Script/ALL_ScriptDatabe_Create_Insert.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VietPro_Shop_Laravel/app/Http/Controllers/Admin/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/app/Http/Controllers/Admin/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VietPro_Shop_Laravel/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VietPro_Shop_Laravel/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VietPro_Shop_Laravel/resources/views/backend/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/resources/views/backend/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VietPro_Shop_Laravel/resources/views/backend/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/resources/views/backend/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VietPro_Shop_Laravel/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VietPro_Shop_Laravel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,6 +190,7 @@
       <workItem from="1596430693961" duration="24609000" />
       <workItem from="1596508823776" duration="13787000" />
       <workItem from="1596547440877" duration="81000" />
+      <workItem from="1596556144459" duration="1009000" />
     </task>
     <servers />
   </component>

@@ -13,6 +13,7 @@ DROP TABLE IF EXISTS vp_users;
 CREATE TABLE IF NOT EXISTS vp_users (
     id INT AUTO_INCREMENT,
 
+    name VARCHAR(64),
     email VARCHAR(64),
     password VARCHAR(64),
     level  TINYINT,
@@ -31,11 +32,11 @@ CREATE TABLE IF NOT EXISTS vp_users (
 # - - - - - - - - - - - - - - - - - - - - Insert Data - - - - - - - - - - - - - - - - - - - -  #
 
 #Password: 123456
-INSERT INTO vp_users (email, password, level)
-VALUES ('DinhHieu8896@gmail.com', '$2y$10$YKY51A9REcXLZVRAC87AcuXnC.Nb8WK8rD/WgfAVxPSAelLZHQf06', 1);
-INSERT INTO vp_users (email, password, level)
-VALUES ('Hieu.iceTea@gmail.com', '$2y$10$YKY51A9REcXLZVRAC87AcuXnC.Nb8WK8rD/WgfAVxPSAelLZHQf06', 2);
-INSERT INTO vp_users (email, password, level)
-VALUES ('A@gmail.com', '$2y$10$YKY51A9REcXLZVRAC87AcuXnC.Nb8WK8rD/WgfAVxPSAelLZHQf06', 1);
-INSERT INTO vp_users (email, password, level)
-VALUES ('B@gmail.com', '$2y$10$YKY51A9REcXLZVRAC87AcuXnC.Nb8WK8rD/WgfAVxPSAelLZHQf06', 2);
+INSERT INTO vp_users (name, email, password, level)
+VALUES ('Hiếu iceTea', 'DinhHieu8896@gmail.com', '$2y$10$YKY51A9REcXLZVRAC87AcuXnC.Nb8WK8rD/WgfAVxPSAelLZHQf06', 1);
+INSERT INTO vp_users (name, email, password, level)
+VALUES ('Hiếu iceTea', 'Hieu.iceTea@gmail.com', '$2y$10$YKY51A9REcXLZVRAC87AcuXnC.Nb8WK8rD/WgfAVxPSAelLZHQf06', 2);
+INSERT INTO vp_users (name, email, password, level)
+VALUES ('Hiếu iceTea', 'A@gmail.com', '$2y$10$YKY51A9REcXLZVRAC87AcuXnC.Nb8WK8rD/WgfAVxPSAelLZHQf06', 1);
+INSERT INTO vp_users (name, email, password, level)
+VALUES ('Hiếu iceTea', 'B@gmail.com', '$2y$10$YKY51A9REcXLZVRAC87AcuXnC.Nb8WK8rD/WgfAVxPSAelLZHQf06', 2);
