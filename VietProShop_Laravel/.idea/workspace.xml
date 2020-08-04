@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a6f40e04-0825-4397-82d3-20e930213844" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/VietProShop_Laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/VietProShop_Laravel.iml" afterDir="false" />
-    </list>
+    <list default="true" id="a6f40e04-0825-4397-82d3-20e930213844" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,12 +137,15 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1fdIuQBS3jBGjW7qvNOyLrvnQVt" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
@@ -162,7 +163,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596541768427</updated>
-      <workItem from="1596541769740" duration="140000" />
+      <workItem from="1596541769740" duration="834000" />
     </task>
     <servers />
   </component>
@@ -179,6 +180,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="493" y="248" key="#Composer" timestamp="1596541910406">
