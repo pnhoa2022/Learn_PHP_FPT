@@ -20,22 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="427170ad-deab-42fe-ac2d-ea3e2f1b3478" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/app/Http/Middleware/CheckLogedIn.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/app/Http/Middleware/CheckLogedOut.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/app/Http/Requests/LoginRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/resources/views/backend/errors/all_errors.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VietPro_Shop_Laravel/.idea/dataSources/6afbd3a9-9505-49ae-bad0-cd53bc36d9a0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/.idea/dataSources/6afbd3a9-9505-49ae-bad0-cd53bc36d9a0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../VietPro_Shop_Laravel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VietPro_Shop_Laravel/_Docs/DataBase_Script/ALL_ScriptDatabe_Create_Insert.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/_Docs/DataBase_Script/ALL_ScriptDatabe_Create_Insert.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VietPro_Shop_Laravel/app/Http/Controllers/Admin/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/app/Http/Controllers/Admin/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VietPro_Shop_Laravel/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VietPro_Shop_Laravel/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VietPro_Shop_Laravel/resources/views/backend/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/resources/views/backend/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VietPro_Shop_Laravel/resources/views/backend/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/resources/views/backend/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VietPro_Shop_Laravel/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../VietPro_Shop_Laravel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/../VietPro_Shop_Laravel/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +175,7 @@
       <workItem from="1596430693961" duration="24609000" />
       <workItem from="1596508823776" duration="13787000" />
       <workItem from="1596547440877" duration="81000" />
-      <workItem from="1596556144459" duration="1009000" />
+      <workItem from="1596556144459" duration="1012000" />
     </task>
     <servers />
   </component>

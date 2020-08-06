@@ -20,21 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="773a5b2a-db4f-46a8-ace8-74652a885997" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckLogedIn.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckLogedOut.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/LoginRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/backend/errors/all_errors.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Demo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/DemoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/CategoryRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/asset/backend/img/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/layout/master.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/backend/notifications/all_notifications.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../VietPro_HocLaravel_5.8/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../VietPro_HocLaravel_5.8/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/6afbd3a9-9505-49ae-bad0-cd53bc36d9a0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6afbd3a9-9505-49ae-bad0-cd53bc36d9a0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Docs/DataBase_Script/ALL_ScriptDatabe_Create_Insert.sql" beforeDir="false" afterPath="$PROJECT_DIR$/_Docs/DataBase_Script/ALL_ScriptDatabe_Create_Insert.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/addproduct.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/addproduct.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/editcategory.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/editcategory.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/editproduct.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/editproduct.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/backend/product.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/product.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +173,13 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/backend/notifications" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\Learn_PHP_FPT\VietPro_Shop_Laravel\resources\views\backend\notifications" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -187,7 +199,9 @@
       <workItem from="1596549138113" duration="204000" />
       <workItem from="1596549370984" duration="36000" />
       <workItem from="1596549626909" duration="181000" />
-      <workItem from="1596552345806" duration="7603000" />
+      <workItem from="1596552345806" duration="7870000" />
+      <workItem from="1596562875633" duration="12785000" />
+      <workItem from="1596591735641" duration="9170000" />
     </task>
     <servers />
   </component>
@@ -218,29 +232,37 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="275" y="27" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738/1366.-136.1440.870@0.0.1366.738" timestamp="1596552411506" />
+    <state x="388" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1596572574701">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="388" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.738/1366.-136.1440.870@0.0.1366.738" timestamp="1596572574701" />
     <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596557013910">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="413" y="124" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.738/1366.-136.1440.870@0.0.1366.738" timestamp="1596557013910" />
-    <state width="905" height="182" key="GridCell.Tab.0.bottom" timestamp="1596558863962">
+    <state width="905" height="182" key="GridCell.Tab.0.bottom" timestamp="1596573862177">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="905" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738/1366.-136.1440.870@0.0.1366.738" timestamp="1596558863962" />
-    <state width="905" height="182" key="GridCell.Tab.0.center" timestamp="1596558863961">
+    <state width="905" height="182" key="GridCell.Tab.0.bottom/0.0.1366.738/1366.-136.1440.870@0.0.1366.738" timestamp="1596573862177" />
+    <state width="905" height="182" key="GridCell.Tab.0.center" timestamp="1596573862177">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="905" height="182" key="GridCell.Tab.0.center/0.0.1366.738/1366.-136.1440.870@0.0.1366.738" timestamp="1596558863961" />
-    <state width="905" height="182" key="GridCell.Tab.0.left" timestamp="1596558863960">
+    <state width="905" height="182" key="GridCell.Tab.0.center/0.0.1366.738/1366.-136.1440.870@0.0.1366.738" timestamp="1596573862177" />
+    <state width="905" height="182" key="GridCell.Tab.0.left" timestamp="1596573862177">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="905" height="182" key="GridCell.Tab.0.left/0.0.1366.738/1366.-136.1440.870@0.0.1366.738" timestamp="1596558863960" />
-    <state width="905" height="182" key="GridCell.Tab.0.right" timestamp="1596558863961">
+    <state width="905" height="182" key="GridCell.Tab.0.left/0.0.1366.738/1366.-136.1440.870@0.0.1366.738" timestamp="1596573862177" />
+    <state width="905" height="182" key="GridCell.Tab.0.right" timestamp="1596573862177">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state width="905" height="182" key="GridCell.Tab.0.right/0.0.1366.738/1366.-136.1440.870@0.0.1366.738" timestamp="1596558863961" />
-    <state x="517" y="292" key="NewPhpFileDialog" timestamp="1596555842155">
+    <state width="905" height="182" key="GridCell.Tab.0.right/0.0.1366.738/1366.-136.1440.870@0.0.1366.738" timestamp="1596573862177" />
+    <state x="517" y="292" key="NewPhpFileDialog" timestamp="1596564576422">
       <screen x="0" y="0" width="1366" height="738" />
     </state>
-    <state x="517" y="292" key="NewPhpFileDialog/0.0.1366.738/1366.-136.1440.870@0.0.1366.738" timestamp="1596555842155" />
+    <state x="517" y="292" key="NewPhpFileDialog/0.0.1366.738/1366.-136.1440.870@0.0.1366.738" timestamp="1596564576422" />
+    <state x="361" y="0" width="1021" height="725" key="dock-window-1" timestamp="1596572508880">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="361" y="0" width="1021" height="725" key="dock-window-1/0.0.1366.738/1366.-136.1440.870@0.0.1366.738" timestamp="1596572508880" />
   </component>
 </project>

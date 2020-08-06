@@ -29,6 +29,20 @@ Route::group(['namespace' => 'Admin'], function () {
     });
 
     Route::group(['prefix' => 'admin', 'middleware' => 'CheckLogedOut'], function () {
-        Route::get('home', 'HomeController@getHome');
+        Route::get('home', 'HomeController@getHome')->name('home');
+
+        Route::group(['prefix' => 'category'], function () {
+            Route::get('/', 'CategoryController@getCategory')->name('category');
+            Route::post('/', 'CategoryController@postAddCategory');
+
+            Route::get('/edit/{id}', 'CategoryController@getEditCategory');
+            Route::post('/edit/{id}', 'CategoryController@postEditCategory');
+
+            Route::get('/delete/{id}', 'CategoryController@getDeleteCategory');
+        });
+
+//        Route::group(['prefix' =>'product'], function () {
+//            Route::get('/', '')->name('product');
+//        });
     });
 });

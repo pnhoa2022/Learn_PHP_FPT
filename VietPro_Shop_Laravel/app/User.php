@@ -9,10 +9,10 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     //Tạo liên kết bảng:
-    protected $table = 'vp_users';
+    protected $table = 'user';
 
     //Khai báo khóa chính:
-    protected $primaryKey = 'id'; //Mặc định là id
+    protected $primaryKey = 'user_id'; //Mặc định là id
 
     //Bảng có sử dụng timestamps ko?
     public $timestamps = true; //Mặc định là true
