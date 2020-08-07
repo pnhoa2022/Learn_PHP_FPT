@@ -41,6 +41,20 @@ Route::group(['namespace' => 'Admin'], function () {
             Route::get('/delete/{id}', 'CategoryController@getDeleteCategory');
         });
 
+        Route::group(['prefix' => 'product'], function () {
+            Route::get('/', 'ProductController@index')->name('product');
+
+            Route::get('/view/{id}', 'ProductController@show');
+
+            Route::get('/add', 'ProductController@create');
+            Route::post('/add', 'ProductController@store');
+
+            Route::get('/edit/{id}', 'ProductController@edit');
+            Route::post('/edit/{id}', 'ProductController@update');
+
+            Route::get('/delete/{id}', 'ProductController@destroy');
+        });
+
 //        Route::group(['prefix' =>'product'], function () {
 //            Route::get('/', '')->name('product');
 //        });

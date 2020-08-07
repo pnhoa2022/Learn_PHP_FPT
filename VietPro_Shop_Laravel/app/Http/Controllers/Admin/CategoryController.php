@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryRequest;
-use Illuminate\Http\Request;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
@@ -14,7 +13,7 @@ class CategoryController extends Controller
     public function getCategory()
     {
         $data = ['categories' => Category::all()];
-        return view('backend.category', $data);
+        return view('backend.category.index', $data);
     }
 
     public function postAddCategory(CategoryRequest $request)
@@ -35,7 +34,7 @@ class CategoryController extends Controller
     public function getEditCategory($id)
     {
         $data = ['category' => Category::findOrFail($id)];
-        return view('backend.editcategory', $data);
+        return view('backend.category.edit', $data);
     }
 
     public function postEditCategory($id, CategoryRequest $request)

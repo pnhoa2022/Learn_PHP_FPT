@@ -9,7 +9,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/datepicker3.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+    <script type="text/javascript" src="ckeditor_4.14.1_standard/ckeditor.js"></script>
     <script src="js/lumino.glyphs.js"></script>
 </head>
 <body>
@@ -100,6 +100,8 @@
         if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
     })
 </script>
+
+<script src="js/myscript.js"></script>
 </body>
 
 </html>

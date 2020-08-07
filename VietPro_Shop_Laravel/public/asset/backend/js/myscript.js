@@ -12,6 +12,6 @@ function changeImg(input){
 }
 $(document).ready(function() {
     $('#avatar').click(function(){
-        $('#img').click();
+        $('#image').click();
     });
 });
