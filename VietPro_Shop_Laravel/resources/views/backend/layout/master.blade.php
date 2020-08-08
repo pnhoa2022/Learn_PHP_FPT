@@ -4,8 +4,8 @@
     <base href="{{ asset('asset/backend') }}/">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title') | Vietpro shop</title>
-    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
+    <title>Admin - @yield('title') | Vietpro shop</title>
+    <link rel="shortcut icon" type="image/ico" href="../img/favicon.ico"/>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/datepicker3.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">

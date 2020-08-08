@@ -9,6 +9,7 @@ class Product extends Model
     protected $table = 'product';
     protected $primaryKey = 'product_id';
     protected $guarded = [];
+    protected $perPage = 5;
 
     public static function all($columns = ['*'])
     {

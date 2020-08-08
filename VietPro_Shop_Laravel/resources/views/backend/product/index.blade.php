@@ -7,8 +7,8 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Sản phẩm</h1>
-                @include('backend.errors.all_errors')
-                @include('backend.notifications.all_notifications')
+                @include('errors.all_errors')
+                @include('notifications.all_notifications')
             </div>
         </div><!--/.row-->
 
@@ -41,9 +41,9 @@
                                             <td>{{ $product->name }}</td>
                                             <td>{{ number_format($product->price, 0, ',', '.') }} VND</td>
                                             <td>
-                                                <img height="110"
-                                                     src="img/product_image/{{ $product->image }}"
-                                                     class="thumbnail">
+                                                <img height="100"
+                                                     src="../img/product_image/{{ $product->image }}"
+                                                     class="thumbnail center-block">
                                             </td>
                                             <td>{{ $product->category->name }}</td>
                                             <td>
@@ -65,9 +65,20 @@
                             </div>
                         </div>
                         <div class="clearfix"></div>
+                        <div id="pagination">
+                            <ul class="pagination pagination-lg justify-content-center">
+
+                                {{ $products->links() }}
+
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
+
         </div><!--/.row-->
+
+
+
     </div>    <!--/.main-->
 @endsection

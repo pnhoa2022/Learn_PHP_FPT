@@ -17,8 +17,8 @@
                         Sửa danh mục
                     </div>
                     <div class="panel-body">
-                        @include('backend.errors.all_errors')
-                        @include('backend.notifications.all_notifications')
+                        @include('errors.all_errors')
+                        @include('notifications.all_notifications')
                         <form method="post">
                             <div class="form-group">
                                 <label for="name">Tên danh mục:</label>

@@ -14,9 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+
+Route::get('/', 'FrontendController@index');
+
+Route::get('details/{id}/{slug}.html', 'FrontendController@details');
+
+Route::get('category/{id}/{slug}.html', 'FrontendController@category');
 
 Route::group(['namespace' => 'Admin'], function () {
     Route::group(['prefix' => 'login', 'middleware' => 'CheckLogedIn'], function () {
@@ -54,9 +60,5 @@ Route::group(['namespace' => 'Admin'], function () {
 
             Route::get('/delete/{id}', 'ProductController@destroy');
         });
-
-//        Route::group(['prefix' =>'product'], function () {
-//            Route::get('/', '')->name('product');
-//        });
     });
 });

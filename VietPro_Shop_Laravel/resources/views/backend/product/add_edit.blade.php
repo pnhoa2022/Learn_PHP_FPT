@@ -13,8 +13,8 @@
         <div class="row">
             <div class="col-xs-12 col-md-12 col-lg-12">
 
-                @include('backend.errors.all_errors')
-                @include('backend.notifications.all_notifications')
+                @include('errors.all_errors')
+                @include('notifications.all_notifications')
 
                 <div class="panel panel-primary">
                     <div class="panel-heading">{{ request()->segment(3) == 'add' ? 'Thêm' : 'Sửa' }} sản phẩm</div>
@@ -44,7 +44,7 @@
                                                class="form-control hidden"
                                                onchange="changeImg(this)">
                                         <img id="avatar" class="thumbnail" width="300px"
-                                             src="{{ asset('asset/backend/img/product_image/' . (old('image') ?? $product->image ?? 'new_seo-10-512.png' )) }}">
+                                             src="{{ asset('asset/img/product_image/' . (old('image') ?? $product->image ?? 'new_seo-10-512.png' )) }}">
                                         <input type="hidden" name="image_old" value="{{ old('image') ?? $product->image ?? '' }}">
                                     </div>
 

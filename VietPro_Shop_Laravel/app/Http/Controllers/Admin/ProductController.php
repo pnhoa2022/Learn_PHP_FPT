@@ -18,7 +18,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all()->sortByDesc('product_id');
+        $products = Product::where('deleted', false)->orderBy('product_id')->paginate();
 
         $data = ['products' => $products];
 
@@ -69,7 +69,7 @@ class ProductController extends Controller
         //$file->storeAs('upload_folder', $file_name);
 
         //Nếu muốn lưu file vào thư mục public thì dùng cách này:
-        $file->move('asset\backend\img\product_image', $file_name_uniqid);
+        $file->move('asset\img\product_image', $file_name_uniqid);
 
         return redirect()->route('product')->with('notification', 'Thêm sản phẩm thành công');
     }
@@ -141,8 +141,8 @@ class ProductController extends Controller
             $file = $request->image;
             $file_name_uniqid = $this->getFileNameUniqueID($file);
             $values['image'] = $file_name_uniqid;
-            $file->move('asset\backend\img\product_image', $file_name_uniqid);
-            unlink('asset/backend/img/product_image/' . $request->image_old);
+            $file->move('asset/img/product_image', $file_name_uniqid);
+            unlink('asset/img/product_image/' . $request->image_old);
         }
 
         Product::where('product_id', $id)->update($values);
@@ -160,7 +160,7 @@ class ProductController extends Controller
         $product = Product::where('product_id', $id);
 
         $fileName = $product->first()->image;
-        $str = 'asset/backend/img/product_image/';
+        $str = 'asset/img/product_image/';
         File::move(public_path($str . $fileName), public_path($str . 'trash/' . $fileName));
 
         $product->update(['deleted' => true]);

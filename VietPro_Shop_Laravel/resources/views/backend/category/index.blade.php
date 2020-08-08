@@ -7,8 +7,8 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Danh mục sản phẩm</h1>
-                @include('backend.errors.all_errors')
-                @include('backend.notifications.all_notifications')
+                @include('errors.all_errors')
+                @include('notifications.all_notifications')
             </div>
 
         </div><!--/.row-->
