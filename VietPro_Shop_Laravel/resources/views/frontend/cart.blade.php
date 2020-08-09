@@ -45,7 +45,9 @@
                                         {{ number_format($cart_content->price * $cart_content->qty, 0, ',', '.') }} VND
                                     </span>
                                 </td>
-                                <td><a href="{{ asset('cart/delete/' . $cart_content->rowId) }}">Xóa</a></td>
+                                <td><a href="{{ asset('cart/delete/' . $cart_content->rowId) }}"
+                                       onclick="return confirm('Xóa sản phẩm  [ {{ $cart_content->name }} ]  khỏi giỏ hàng?')">Xóa</a>
+                                </td>
                             </tr>
                         @endforeach
 
@@ -57,16 +59,19 @@
 
                         </div>
                         <div class="col-md-6 col-sm-12 col-xs-12">
-                            <a href="#" class="my-btn btn">Mua tiếp</a>
-                            <a href="#" class="my-btn btn">Cập nhật</a>
-                            <a href="{{ asset('cart/delete/all') }}" class="my-btn btn">Xóa giỏ hàng</a>
+                            <a href="{{ asset('/') }}" class="my-btn btn">Mua tiếp</a>
+                            <a href="{{ asset('cart/show#list-cart') }}" class="my-btn btn">Cập nhật</a>
+                            <a href="{{ asset('cart/delete/all') }}"
+                               onclick="return confirm('Bạn có chắc muốn xóa toàn bộ giỏ hàng không?')"
+                               class="my-btn btn">Xóa giỏ hàng</a>
                         </div>
                     </div>
                 </form>
 
                 <div id="xac-nhan">
                     <h3>Xác nhận mua hàng</h3>
-                    <form>
+                    <form method="post">
+                        @csrf
                         <div class="form-group">
                             <label for="email">Email address:</label>
                             <input required type="email" class="form-control" id="email" name="email">

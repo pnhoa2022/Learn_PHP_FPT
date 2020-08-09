@@ -34,6 +34,9 @@ Route::group(['prefix' => 'cart'], function () {
     Route::get('delete/{rowId}', 'CartController@delete');
 
     Route::get('update', 'CartController@update');
+
+    Route::post('show', 'CartController@postMail');
+    Route::get('complete', 'CartController@complete');
 });
 
 Route::group(['namespace' => 'Admin'], function () {
