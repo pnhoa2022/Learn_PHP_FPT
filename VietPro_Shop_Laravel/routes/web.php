@@ -50,7 +50,7 @@ Route::group(['namespace' => 'Admin'], function () {
     });
 
     Route::group(['prefix' => 'admin', 'middleware' => 'CheckLogedOut'], function () {
-        Route::get('home', 'HomeController@getHome')->name('home');
+        Route::get('/', 'HomeController@getHome')->name('admin');
 
         Route::group(['prefix' => 'category'], function () {
             Route::get('/', 'CategoryController@getCategory')->name('category');

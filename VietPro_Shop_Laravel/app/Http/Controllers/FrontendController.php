@@ -66,7 +66,11 @@ class FrontendController extends Controller
 
     public function category($id, $slug)
     {
-        $products = Product::where('category_id', $id)->orderBy('product_id', 'desc')->paginate();
+        $products = Product::where('category_id', $id)
+            ->orderBy('product_id', 'desc')
+            ->where('deleted', false)
+            ->paginate();
+
         $category_name = Category::findOrFail($id)->name;
 
         $data = [
@@ -82,7 +86,10 @@ class FrontendController extends Controller
         $q = $keyword_search = $request->get('q');
         $q = str_replace(' ', '%', $q);
 
-        $products = Product::where('name', 'like', '%' . $q . '%')->orderBy('product_id', 'desc')->get();
+        $products = Product::where('name', 'like', '%' . $q . '%')
+            ->orderBy('product_id', 'desc')
+            ->where('deleted', false)
+            ->get();
 
         $data = [
             'products' => $products,

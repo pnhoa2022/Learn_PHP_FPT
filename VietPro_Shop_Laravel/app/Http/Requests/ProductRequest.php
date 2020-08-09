@@ -26,6 +26,8 @@ class ProductRequest extends FormRequest
         $rule = [
             'image' => 'image',
 
+            'categoty_id' => 'required',
+
             'name' => 'required',
             'price' => 'required',
             'warranty' => 'required',
@@ -48,6 +50,8 @@ class ProductRequest extends FormRequest
         return [
             'image.image' => '[Ảnh sản phẩm] phải là một hình ảnh',
             'image.required' => '[Ảnh sản phẩm] không được để trống',
+
+            'categoty_id.required' => '[Danh mục] không được để trống',
 
             'name.required' => '[Tên] không được để trống',
             'price.required' => '[Giá bán] không được để trống',

@@ -4,7 +4,7 @@
     <base href="{{ asset('asset/backend') }}/">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin - @yield('title') | Vietpro shop</title>
+    <title>Admin - @yield('title') | iceTea shop</title>
     <link rel="shortcut icon" type="image/ico" href="../img/favicon.ico"/>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/datepicker3.css" rel="stylesheet">
@@ -16,7 +16,7 @@
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Vietpro Admin</a>
+            <a class="navbar-brand" href="{{ route('admin') }}">iceTea-Shop Admin</a>
             <ul class="user-menu">
                 <li class="dropdown pull-right">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -44,8 +44,8 @@
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
     <ul class="nav menu">
         <li role="presentation" class="divider"></li>
-        <li class="{{ (request()->segment(2) == 'home') ? 'active' : '' }}">
-            <a href="{{ route('home') }}">
+        <li class="{{ (request()->segment(2) == '') ? 'active' : '' }}">
+            <a href="{{ route('admin') }}">
                 <svg class="glyph stroked dashboard-dial">
                     <use xlink:href="#stroked-dashboard-dial"></use>
                 </svg>
