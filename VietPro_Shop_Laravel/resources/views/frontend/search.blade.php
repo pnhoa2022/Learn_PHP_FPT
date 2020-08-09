@@ -1,5 +1,7 @@
 @extends('frontend.layout.master')
 
+@section('title', 'Kết quả tìm kiếm')
+
 @section('main')
 
     <link rel="stylesheet" href="css/search.css">

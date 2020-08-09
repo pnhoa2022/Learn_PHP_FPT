@@ -28,6 +28,14 @@ Route::get('category/{id}/{slug}.html', 'FrontendController@category');
 
 Route::get('search', 'FrontendController@search');
 
+Route::group(['prefix' => 'cart'], function () {
+    Route::get('add/{id}', 'CartController@add');
+    Route::get('show', 'CartController@show');
+    Route::get('delete/{rowId}', 'CartController@delete');
+
+    Route::get('update', 'CartController@update');
+});
+
 Route::group(['namespace' => 'Admin'], function () {
     Route::group(['prefix' => 'login', 'middleware' => 'CheckLogedIn'], function () {
         Route::get('/', 'LoginController@getLogin')->name('login');

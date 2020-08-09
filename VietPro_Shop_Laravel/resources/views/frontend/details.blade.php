@@ -21,7 +21,7 @@
                     <p>Tình trạng: {{ $product->condition }}</p>
                     <p>Khuyến mại: {{ $product->promotion }}</p>
                     <p>Còn hàng: {{ $product->status == 1 ? 'Còn hàng' : 'Hết hàng' }}</p>
-                    <p class="add-cart text-center"><a href="#">Đặt hàng online</a></p>
+                    <p class="add-cart text-center"><a href="{{ asset('cart/add/' . $product->product_id) }}">Đặt hàng online</a></p>
                 </div>
             </div>
         </div>
