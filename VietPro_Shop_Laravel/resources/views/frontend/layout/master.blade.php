@@ -40,7 +40,7 @@
         <div class="row">
             <div id="logo" class="col-md-3 col-sm-12 col-xs-12">
                 <h1>
-                    <a href="/"><img src="img/home/logo.png"></a>
+                    <a href="/"><img width="178" src="img/home/logo.png"></a>
                     <nav><a id="pull" class="btn btn-danger" href="#">
                             <i class="fa fa-bars"></i>
                         </a></nav>
@@ -174,7 +174,7 @@
         <div class="container">
             <div class="row">
                 <div id="logo-f" class="col-md-3 col-sm-12 col-xs-12 text-center">
-                    <a href="#"><img src="img/home/logo.png"></a>
+                    <a href="#"><img width="178" src="img/home/logo.png"></a>
                 </div>
                 <div id="about" class="col-md-3 col-sm-12 col-xs-12">
                     <h3>About us</h3>
