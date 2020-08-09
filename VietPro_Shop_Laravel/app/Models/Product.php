@@ -16,6 +16,16 @@ class Product extends Model
         return parent::all($columns)->where('deleted', false);
     }
 
+    public function category()
+    {
+        return $this->hasOne('App\Models\Category', 'category_id', 'category_id');
+    }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Models\Comment', 'product_id', 'product_id');
+    }
+
 //    public static function all_with_categoty()
 //    {
 //        return DB::table('product')
@@ -24,9 +34,4 @@ class Product extends Model
 //            ->orderByDesc('product_id')
 //            ->get();
 //    }
-
-    public function category()
-    {
-        return $this->hasOne('App\Models\Category', 'category_id', 'category_id');
-    }
 }

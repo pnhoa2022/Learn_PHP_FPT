@@ -46,10 +46,16 @@
                         </a></nav>
                 </h1>
             </div>
+
             <div id="search" class="col-md-7 col-sm-12 col-xs-12">
-                <input type="text" name="text" value="Nhập từ khóa ...">
-                <input type="submit" name="submit" value="Tìm Kiếm">
+                <form action="{{ asset('search') }}">
+
+                    <input type="text" name="q" placeholder="Nhập từ khóa ..." value="{{ $keyword_search ?? '' }}">
+                    <input type="submit" value="Tìm Kiếm">
+
+                </form>
             </div>
+
             <div id="cart" class="col-md-2 col-sm-12 col-xs-12">
                 <a class="display" href="#">Giỏ hàng</a>
                 <a href="#">6</a>
@@ -69,7 +75,9 @@
                         <li class="menu-item">danh mục sản phẩm</li>
 
                         @foreach($categories as $category)
-                            <li class="menu-item"><a href="{{ asset('category/' . $category->category_id . '/' . $category->slug . '.html') }}" title="{{ $category->name }}">{{ $category->name }}</a></li>
+                            <li class="menu-item"><a
+                                    href="{{ asset('category/' . $category->category_id . '/' . $category->slug . '.html') }}"
+                                    title="{{ $category->name }}">{{ $category->name }}</a></li>
                         @endforeach
 
                     </ul>
@@ -149,8 +157,8 @@
                 </div>
 
                 <!-- wrap-inner -->
-                @yield('main')
-                <!-- ./ wrap-inner -->
+            @yield('main')
+            <!-- ./ wrap-inner -->
 
                 <!-- end main -->
             </div>

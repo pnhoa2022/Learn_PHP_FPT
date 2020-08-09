@@ -18,7 +18,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::where('deleted', false)->orderBy('product_id')->paginate();
+        $products = Product::where('deleted', false)->orderBy('product_id', 'desc')->paginate();
 
         $data = ['products' => $products];
 

@@ -34,18 +34,25 @@
         <div id="comment">
             <h3>Bình luận</h3>
             <div class="col-md-9 comment">
-                <form>
+                @include('errors.all_errors')
+                @include('notifications.all_notifications')
+                <form method="post"
+                      action="{{ url('details/post-comment/' . $product->product_id . '/' . $product->slug . '.html') }}">
+                    @csrf
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input required type="email" class="form-control" id="email" name="email">
+                        <input type="text" class="form-control" id="email" name="comment_email"
+                               value="{{ old('comment_email') }}">
                     </div>
                     <div class="form-group">
                         <label for="name">Tên:</label>
-                        <input required type="text" class="form-control" id="name" name="name">
+                        <input type="text" class="form-control" id="name" name="comment_name"
+                               value="{{ old('comment_name') }}">
                     </div>
                     <div class="form-group">
                         <label for="cm">Bình luận:</label>
-                        <textarea required rows="10" id="cm" class="form-control" name="content"></textarea>
+                        <textarea rows="3" id="cm" class="form-control"
+                                  name="comment_content">{{ old('comment_content') }}</textarea>
                     </div>
                     <div class="form-group text-right">
                         <button type="submit" class="btn btn-default">Gửi</button>
@@ -54,42 +61,18 @@
             </div>
         </div>
         <div id="comment-list">
-            <ul>
-                <li class="com-title">
-                    Vietpro Education
-                    <br>
-                    <span>2017-19-01 10:00:00</span>
-                </li>
-                <li class="com-details">
-                    HTC One X 32GB là sản phẩm đáng chờ đợi nhất trong năm nay, với cấu hình mạnh và giá thành tương đối
-                    mềm
-                    so với các dòng Smart Phone của các hãng khác
-                </li>
-            </ul>
-            <ul>
-                <li class="com-title">
-                    Vietpro Education
-                    <br>
-                    <span>2017-19-01 10:00:00</span>
-                </li>
-                <li class="com-details">
-                    HTC One X 32GB là sản phẩm đáng chờ đợi nhất trong năm nay, với cấu hình mạnh và giá thành tương đối
-                    mềm
-                    so với các dòng Smart Phone của các hãng khác
-                </li>
-            </ul>
-            <ul>
-                <li class="com-title">
-                    Vietpro Education
-                    <br>
-                    <span>2017-19-01 10:00:00</span>
-                </li>
-                <li class="com-details">
-                    HTC One X 32GB là sản phẩm đáng chờ đợi nhất trong năm nay, với cấu hình mạnh và giá thành tương đối
-                    mềm
-                    so với các dòng Smart Phone của các hãng khác
-                </li>
-            </ul>
+            @foreach($product->comments as $comment)
+                <ul>
+                    <li class="com-title">
+                        {{ $comment->name }}
+                        <br>
+                        <span>{{ date_format($comment->created_at, 'd-m-Y H:i') }}</span>
+                    </li>
+                    <li class="com-details">
+                        {{ $comment->content }}
+                    </li>
+                </ul>
+            @endforeach
         </div>
     </div>
 

@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CommentRequest;
 use App\Models\Category;
+use App\Models\Comment;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FrontendController extends Controller
 {
@@ -34,6 +37,8 @@ class FrontendController extends Controller
             ->where('slug', $slug)
             ->first();
 
+        $product->comments = $product->comments->sortByDesc('comment_id');
+
         if (!$product) {
             return redirect('404');
         }
@@ -41,6 +46,22 @@ class FrontendController extends Controller
         $data = ['product' => $product];
 
         return view('frontend.details', $data);
+    }
+
+    public function postComment($id, $slug, CommentRequest $request)
+    {
+        $comment = new Comment();
+
+        $comment->product_id = $id;
+
+        $comment->name = $request->comment_name;
+        $comment->email = $request->comment_email;
+        $comment->content = $request->comment_content;
+
+        $comment->save();
+
+        return redirect('details/' . $id . '/' . $slug . '.html#comment')->with('notification', 'Thêm bình luận thành công!');
+
     }
 
     public function category($id, $slug)
@@ -54,5 +75,20 @@ class FrontendController extends Controller
         ];
 
         return view('frontend.category', $data);
+    }
+
+    public function search(Request $request)
+    {
+        $q = $keyword_search = $request->get('q');
+        $q = str_replace(' ', '%', $q);
+
+        $products = Product::where('name', 'like', '%' . $q . '%')->orderBy('product_id', 'desc')->get();
+
+        $data = [
+            'products' => $products,
+            'keyword_search' => $keyword_search,
+        ];
+
+        return view('frontend.search', $data);
     }
 }
