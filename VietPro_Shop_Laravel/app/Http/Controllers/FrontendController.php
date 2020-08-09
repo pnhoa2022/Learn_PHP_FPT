@@ -66,6 +66,11 @@ class FrontendController extends Controller
 
     public function category($id, $slug)
     {
+        $categories = Category::all()->where('category_id', $id);
+        if (count($categories) == 0) {
+            return redirect('/');
+        }
+
         $products = Product::where('category_id', $id)
             ->orderBy('product_id', 'desc')
             ->where('deleted', false)

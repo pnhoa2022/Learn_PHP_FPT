@@ -18,25 +18,29 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 
-Route::get('/', 'FrontendController@index');
+Route::group(['prefix' => ''], function () {
+    Route::get('', 'FrontendController@index');
 
-Route::get('details/{id}/{slug}.html', 'FrontendController@details');
+    Route::group(['prefix' => 'details'], function () {
+        Route::get('{id}/{slug}.html', 'FrontendController@details');
 
-Route::post('details/post-comment/{id}/{slug}.html', 'FrontendController@postComment');
+        Route::post('post-comment/{id}/{slug}.html', 'FrontendController@postComment');
+    });
 
-Route::get('category/{id}/{slug}.html', 'FrontendController@category');
+    Route::get('category/{id}/{slug}.html', 'FrontendController@category');
 
-Route::get('search', 'FrontendController@search');
+    Route::get('search', 'FrontendController@search');
 
-Route::group(['prefix' => 'cart'], function () {
-    Route::get('add/{id}', 'CartController@add');
-    Route::get('show', 'CartController@show');
-    Route::get('delete/{rowId}', 'CartController@delete');
+    Route::group(['prefix' => 'cart'], function () {
+        Route::get('add/{id}', 'CartController@add');
+        Route::get('show', 'CartController@show');
+        Route::get('delete/{rowId}', 'CartController@delete');
 
-    Route::get('update', 'CartController@update');
+        Route::get('update', 'CartController@update');
 
-    Route::post('show', 'CartController@postMail');
-    Route::get('complete', 'CartController@complete');
+        Route::post('show', 'CartController@postMail');
+        Route::get('complete', 'CartController@complete');
+    });
 });
 
 Route::group(['namespace' => 'Admin'], function () {

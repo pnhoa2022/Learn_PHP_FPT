@@ -42,7 +42,7 @@ class CartController extends Controller
             Cart::remove($rowId);
         }
 
-        return redirect('cart/show#list-cart');
+        return redirect('cart/show');
     }
 
     public function update(Request $request)
