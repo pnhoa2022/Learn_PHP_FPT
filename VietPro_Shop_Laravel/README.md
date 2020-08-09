@@ -1,5 +1,5 @@
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
-<p align="center"><img src="https://hieu-icetea.github.io/img/favicon.ico" width="80"></p>
+<p align="center"><img src="https://hieu-icetea.github.io/img/favicon.ico" width="100"></p>
 
 ## Shop Laravel 7.24 (Hieu iceTea)
 
@@ -19,6 +19,8 @@ Laravel shopping cart:
 
 
 [FB.com/Hieu.iceTea](http://fb.com/Hieu.iceTea).
+
+[olimortimer/LaravelShoppingcart](http://github.com/olimortimer/LaravelShoppingcart).
 
 
 
