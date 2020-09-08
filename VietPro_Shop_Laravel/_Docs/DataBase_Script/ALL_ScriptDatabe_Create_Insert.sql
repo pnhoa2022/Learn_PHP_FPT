@@ -6,8 +6,16 @@
 DROP DATABASE IF EXISTS `VietPro_Shop_Laravel`;
 CREATE DATABASE IF NOT EXISTS `VietPro_Shop_Laravel` CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 
+#SHOW VARIABLES LIKE 'SQL_MODE';
+#SHOW GLOBAL VARIABLES LIKE 'SQL_MODE';
+#SET SQL_MODE = 'STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,NO_ENGINE_SUBSTITUTION';
+#SET GLOBAL SQL_MODE = 'NO_ZERO_IN_DATE,NO_ZERO_DATE,NO_ENGINE_SUBSTITUTION';
+#SET SQL_MODE = 'ALLOW_INVALID_DATES';
+
 USE `VietPro_Shop_Laravel`;
-#SET time_zone = '+7:00';
+
+#ALTER DATABASE `VietPro_Shop_Laravel` CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+SET time_zone = '+07:00';
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = #
 #                                            Create Tables                                            #
@@ -15,91 +23,95 @@ USE `VietPro_Shop_Laravel`;
 
 # Create Table
 DROP TABLE IF EXISTS `user`;
-CREATE TABLE IF NOT EXISTS `user` (
-    `user_id` INT AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `user`
+(
+    `user_id`        INT AUTO_INCREMENT,
 
-    `name` VARCHAR(64) NOT NULL,
-    `email` VARCHAR(64) NOT NULL,
-    `password` VARCHAR(128) NOT NULL,
-    `level`  TINYINT NOT NULL,
+    `name`           VARCHAR(64)  NOT NULL,
+    `email`          VARCHAR(64)  NOT NULL,
+    `password`       VARCHAR(128) NOT NULL,
+    `level`          TINYINT      NOT NULL,
     `remember_token` VARCHAR(128),
 
-    `created_by` NVARCHAR(32) DEFAULT 'Hieu-iceTea',
-    `created_at` DATETIME DEFAULT CURRENT_TIME,
-    `updated_by` NVARCHAR(32) DEFAULT NULL,
-    `updated_at` DATETIME DEFAULT NULL,
-    `version` INT DEFAULT 1,
-    `deleted` BOOLEAN DEFAULT FALSE,
+    `created_by`     NVARCHAR(32) DEFAULT 'Hieu-iceTea',
+    `created_at`     TIMESTAMP    DEFAULT CURRENT_TIMESTAMP,
+    `updated_by`     NVARCHAR(32) DEFAULT NULL,
+    `updated_at`     TIMESTAMP    DEFAULT CURRENT_TIMESTAMP,
+    `version`        INT          DEFAULT 1,
+    `deleted`        BOOLEAN      DEFAULT FALSE,
 
     PRIMARY KEY (`user_id`)
 ) ENGINE InnoDB;
 
 # Create Table
 DROP TABLE IF EXISTS `category`;
-CREATE TABLE IF NOT EXISTS `category` (
+CREATE TABLE IF NOT EXISTS `category`
+(
     `category_id` INT AUTO_INCREMENT,
 
-    `name` VARCHAR(64) NOT NULL,
-    `slug` VARCHAR(64) NOT NULL,
+    `name`        VARCHAR(64) NOT NULL,
+    `slug`        VARCHAR(64) NOT NULL,
 
-    `created_by` NVARCHAR(32) DEFAULT 'Hieu-iceTea',
-    `created_at` DATETIME DEFAULT CURRENT_TIME,
-    `updated_by` NVARCHAR(32) DEFAULT NULL,
-    `updated_at` DATETIME DEFAULT NULL,
-    `version` INT DEFAULT 1,
-    `deleted` BOOLEAN DEFAULT FALSE,
+    `created_by`  NVARCHAR(32) DEFAULT 'Hieu-iceTea',
+    `created_at`  TIMESTAMP    DEFAULT CURRENT_TIMESTAMP,
+    `updated_by`  NVARCHAR(32) DEFAULT NULL,
+    `updated_at`  TIMESTAMP    DEFAULT CURRENT_TIMESTAMP,
+    `version`     INT          DEFAULT 1,
+    `deleted`     BOOLEAN      DEFAULT FALSE,
 
     PRIMARY KEY (`category_id`)
 ) ENGINE InnoDB;
 
 # Create Table
 DROP TABLE IF EXISTS `product`;
-CREATE TABLE IF NOT EXISTS `product` (
-    `product_id` INT AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `product`
+(
+    `product_id`  INT AUTO_INCREMENT,
 
     `category_id` INT UNSIGNED NOT NULL,
 
-    `name` VARCHAR(64) NOT NULL,
-    `slug` VARCHAR(64) NOT NULL,
-    `price` INT UNSIGNED,
-    `image` VARCHAR(128),
-    `warranty` VARCHAR(64),
+    `name`        VARCHAR(64)  NOT NULL,
+    `slug`        VARCHAR(64)  NOT NULL,
+    `price`       INT UNSIGNED,
+    `image`       VARCHAR(128),
+    `warranty`    VARCHAR(64),
     `accessories` VARCHAR(64),
-    `condition` VARCHAR(64),
-    `promotion` VARCHAR(64),
-    `status` BOOLEAN,
+    `condition`   VARCHAR(64),
+    `promotion`   VARCHAR(64),
+    `status`      BOOLEAN,
     `description` TEXT,
-    `featured` BOOLEAN,
+    `featured`    BOOLEAN,
 
-    `created_by` NVARCHAR(32) DEFAULT 'Hieu-iceTea',
-    `created_at` DATETIME DEFAULT CURRENT_TIME,
-    `updated_by` NVARCHAR(32) DEFAULT NULL,
-    `updated_at` DATETIME DEFAULT NULL,
-    `version` INT DEFAULT 1,
-    `deleted` BOOLEAN DEFAULT FALSE,
+    `created_by`  NVARCHAR(32) DEFAULT 'Hieu-iceTea',
+    `created_at`  TIMESTAMP    DEFAULT CURRENT_TIMESTAMP,
+    `updated_by`  NVARCHAR(32) DEFAULT NULL,
+    `updated_at`  TIMESTAMP    DEFAULT CURRENT_TIMESTAMP,
+    `version`     INT          DEFAULT 1,
+    `deleted`     BOOLEAN      DEFAULT FALSE,
 
     PRIMARY KEY (`product_id`)
 ) ENGINE InnoDB;
 
 # Create Table
 DROP TABLE IF EXISTS `comment`;
-CREATE TABLE IF NOT EXISTS `comment` (
-     `comment_id` INT AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `comment`
+(
+    `comment_id` INT AUTO_INCREMENT,
 
-     `product_id` INT UNSIGNED NOT NULL,
+    `product_id` INT UNSIGNED NOT NULL,
 
-     `email` VARCHAR(64),
-     `name` VARCHAR(64),
-     `content` VARCHAR(256),
+    `email`      VARCHAR(64),
+    `name`       VARCHAR(64),
+    `content`    VARCHAR(256),
 
-     `created_by` NVARCHAR(32) DEFAULT 'Hieu-iceTea',
-     `created_at` DATETIME DEFAULT CURRENT_TIME,
-     `updated_by` NVARCHAR(32) DEFAULT NULL,
-     `updated_at` DATETIME DEFAULT NULL,
-     `version` INT DEFAULT 1,
-     `deleted` BOOLEAN DEFAULT FALSE,
+    `created_by` NVARCHAR(32) DEFAULT 'Hieu-iceTea',
+    `created_at` TIMESTAMP    DEFAULT CURRENT_TIMESTAMP,
+    `updated_by` NVARCHAR(32) DEFAULT NULL,
+    `updated_at` TIMESTAMP    DEFAULT CURRENT_TIMESTAMP,
+    `version`    INT          DEFAULT 1,
+    `deleted`    BOOLEAN      DEFAULT FALSE,
 
-     PRIMARY KEY (`comment_id`)
+    PRIMARY KEY (`comment_id`)
 ) ENGINE InnoDB;
 
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = #
@@ -107,6 +119,7 @@ CREATE TABLE IF NOT EXISTS `comment` (
 # = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = #
 
 #Password: 123456
+
 INSERT INTO user (name, email, password, level)
 VALUES ('Hiếu iceTea', 'DinhHieu8896@gmail.com', '$2y$10$YKY51A9REcXLZVRAC87AcuXnC.Nb8WK8rD/WgfAVxPSAelLZHQf06', 1);
 INSERT INTO user (name, email, password, level)
