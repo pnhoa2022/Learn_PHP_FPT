@@ -135,7 +135,7 @@
                 </div>
                 <div id="about" class="col-md-3 col-sm-12 col-xs-12">
                     <h3>About us</h3>
-                    <p class="text-justify">iceTea Academy thành lập năm 2009. Chúng tôi đào tạo chuyên sâu trong 2
+                    <p class="text-justify">iceTea Academy thành lập năm 2020. Chúng tôi đào tạo chuyên sâu trong 2
                         lĩnh vực là Lập trình Website & Mobile nhằm cung cấp cho thị trường CNTT Việt Nam những lập
                         trình viên thực sự chất lượng, có khả năng làm việc độc lập, cũng như Team Work ở mọi môi trường
                         đòi hỏi sự chuyên nghiệp cao.</p>
@@ -143,7 +143,7 @@
                 <div id="hotline" class="col-md-3 col-sm-12 col-xs-12">
                     <h3>Hotline</h3>
                     <p>Phone Sale: (+84) 0868 6633 15</p>
-                    <p>Email: Hieu.iceTea@gmail.com</p>
+                    <p>Email: DinhHieu8896@gmail.com</p>
                 </div>
                 <div id="contact" class="col-md-3 col-sm-12 col-xs-12">
                     <h3>Contact Us</h3>
@@ -170,5 +170,34 @@
     </div>
 </footer>
 <!-- endfooter -->
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            xfbml: true,
+            version: 'v8.0'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your Chat Plugin code -->
+<div class="fb-customerchat"
+     attribution=setup_tool
+     page_id="107928264386009"
+     theme_color="#0084ff"
+     logged_in_greeting="Xin chào! Làm thế nào tôi có thể giúp bạn?"
+     logged_out_greeting="Xin chào! Làm thế nào tôi có thể giúp bạn?">
+</div>
+
 </body>
 </html>
