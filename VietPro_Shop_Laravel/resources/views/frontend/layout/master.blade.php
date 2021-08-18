@@ -194,7 +194,7 @@
 <div class="fb-customerchat"
      attribution=setup_tool
      page_id="107928264386009"
-     theme_color="#0084ff"
+     theme_color="#FF9600"
      logged_in_greeting="Xin chào! Làm thế nào tôi có thể giúp bạn?"
      logged_out_greeting="Xin chào! Làm thế nào tôi có thể giúp bạn?">
 </div>
