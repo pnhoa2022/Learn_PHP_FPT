@@ -5,10 +5,11 @@ namespace App\Exports;
 use App\Models\Transaction;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize; //Tell the Export process that the columns need to be automatically sized.
+use Maatwebsite\Excel\Concerns\WithColumnWidths;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
 
-class TransactionsExport implements FromCollection, WithHeadings, WithMapping, ShouldAutoSize
+class TransactionsExport implements FromCollection, WithHeadings, WithMapping, ShouldAutoSize, WithColumnWidths
 {
     /**
     * @return \Illuminate\Support\Collection
@@ -37,6 +38,14 @@ class TransactionsExport implements FromCollection, WithHeadings, WithMapping, S
             $transaction->exp_month,
             $transaction->exp_year,
             $transaction->cvv,
+        ];
+    }
+
+    public function columnWidths(): array
+    {
+        return [
+            'A' => 55,
+            'B' => 45,
         ];
     }
 }
