@@ -4,8 +4,10 @@ namespace App\Exports;
 
 use App\Models\Transaction;
 use Maatwebsite\Excel\Concerns\FromCollection;
+use Maatwebsite\Excel\Concerns\WithHeadings;
+use Maatwebsite\Excel\Concerns\WithMapping;
 
-class TransactionsExport implements FromCollection
+class TransactionsExport implements FromCollection, WithHeadings, WithMapping
 {
     /**
     * @return \Illuminate\Support\Collection
