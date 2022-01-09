@@ -8,8 +8,10 @@ use Maatwebsite\Excel\Concerns\ShouldAutoSize; //Tell the Export process that th
 use Maatwebsite\Excel\Concerns\WithColumnWidths;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
+use Maatwebsite\Excel\Concerns\WithStyles;
+use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 
-class TransactionsExport implements FromCollection, WithHeadings, WithMapping, ShouldAutoSize, WithColumnWidths
+class TransactionsExport implements FromCollection, WithHeadings, WithMapping, ShouldAutoSize, WithColumnWidths, WithStyles
 {
     /**
     * @return \Illuminate\Support\Collection
@@ -46,6 +48,20 @@ class TransactionsExport implements FromCollection, WithHeadings, WithMapping, S
         return [
             'A' => 55,
             'B' => 45,
+        ];
+    }
+
+    public function styles(Worksheet $sheet)
+    {
+        return [
+            // Style the first row as bold text.
+            1    => ['font' => ['bold' => true]],
+
+            // Styling a specific cell by coordinate.
+            'B2' => ['font' => ['italic' => true]],
+
+            // Styling an entire column.
+            'C'  => ['font' => ['size' => 16]],
         ];
     }
 }
