@@ -10,9 +10,10 @@ use Maatwebsite\Excel\Concerns\WithColumnWidths;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\WithMapping;
 use Maatwebsite\Excel\Concerns\WithStyles;
+use Maatwebsite\Excel\Concerns\WithTitle;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 
-class TransactionsExport implements FromCollection, WithHeadings, WithMapping, ShouldAutoSize, WithColumnWidths, WithStyles, ShouldQueue
+class TransactionsExport implements FromCollection, WithHeadings, WithMapping, ShouldAutoSize, WithColumnWidths, WithStyles, ShouldQueue, WithTitle
 {
     /**
     * @return \Illuminate\Support\Collection
@@ -64,5 +65,10 @@ class TransactionsExport implements FromCollection, WithHeadings, WithMapping, S
             // Styling an entire column.
             'C'  => ['font' => ['size' => 16]],
         ];
+    }
+
+    public function title(): string
+    {
+        return 'Sheet1'; //default: 'Worksheet'
     }
 }
