@@ -3,6 +3,7 @@
 namespace App\Exports;
 
 use App\Models\Transaction;
+use Illuminate\Contracts\Queue\ShouldQueue; // Mark an export implicitly as a queued export.
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize; //Tell the Export process that the columns need to be automatically sized.
 use Maatwebsite\Excel\Concerns\WithColumnWidths;
@@ -11,7 +12,7 @@ use Maatwebsite\Excel\Concerns\WithMapping;
 use Maatwebsite\Excel\Concerns\WithStyles;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 
-class TransactionsExport implements FromCollection, WithHeadings, WithMapping, ShouldAutoSize, WithColumnWidths, WithStyles
+class TransactionsExport implements FromCollection, WithHeadings, WithMapping, ShouldAutoSize, WithColumnWidths, WithStyles, ShouldQueue
 {
     /**
     * @return \Illuminate\Support\Collection
