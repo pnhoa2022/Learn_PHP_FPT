@@ -21,7 +21,6 @@ class ExcelController extends Controller
         return Excel::download(new TransactionsExport, 'transactions.'.$type);
     }
 
-
     public function importExcel(Request $request)
     {
         Excel::import(new TransactionsImport,$request->import_file);
