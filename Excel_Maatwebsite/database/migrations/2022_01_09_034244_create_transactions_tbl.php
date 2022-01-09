@@ -15,6 +15,11 @@ class CreateTransactionsTbl extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
+            $table->string('name_on_card');
+            $table->string('card_no');
+            $table->string('exp_month');
+            $table->string('exp_year');
+            $table->string('cvv');
             $table->timestamps();
         });
     }
